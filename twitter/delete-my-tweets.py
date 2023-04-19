@@ -59,7 +59,7 @@ wait.until(EC.url_contains("https://twitter.com/home"))
 wait.until(EC.url_contains("https://twitter.com/home"))
 
 # Navega a la página del muro del usuario
-driver.get("https://twitter.com/puretadeveloper")
+driver.get("https://twitter.com/" + email)
 
 wait.until(EC.url_contains("https://twitter.com/" + email))
 
