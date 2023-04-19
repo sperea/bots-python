@@ -55,9 +55,6 @@ accept_cookies_button.click()
 # Espera a que se cargue la página principal de Twitter
 wait.until(EC.url_contains("https://twitter.com/home"))
 
-# Espera a que se cargue la página principal de Twitter
-wait.until(EC.url_contains("https://twitter.com/home"))
-
 # Navega a la página del muro del usuario
 driver.get("https://twitter.com/" + email)
 
