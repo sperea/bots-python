@@ -115,3 +115,70 @@ Licencia
 Este script está bajo la licencia MIT. Puedes consultar el archivo [LICENSE](LICENSE) para más detalles.
 
 ¡Disfruta utilizando el Mastodon to Twitter Bot! Si tienes alguna pregunta o sugerencia, no dudes en contactarme.
+
+Twitter Tweet Deletion Script
+=============================
+
+This Python script allows you to delete all your tweets on Twitter automatically. It utilizes the Selenium library to interact with the Twitter website and perform the deletion process.
+
+License
+-------
+
+This script is licensed under the GNU General Public License version 3. You can find the full text of the license in the [LICENSE](LICENSE) file.
+
+Prerequisites
+-------------
+
+* Python 3.x
+* Selenium library (installable via `pip install selenium`)
+* Chrome WebDriver (used `webdriver_manager` to manage the WebDriver)
+
+Setup
+-----
+
+1.  Install the required dependencies by running the following command:
+    
+    Copy code
+    
+    `pip install selenium` 
+    
+2.  Make sure you have the appropriate Chrome WebDriver installed. This script uses `webdriver_manager` to automatically download and manage the compatible WebDriver. No additional setup is required.
+    
+
+Usage
+-----
+
+1.  Open the script file `delete_tweets.py` and replace the `email` and `password` variables with your Twitter login credentials.
+    
+2.  Run the script `delete_tweets.py` in your Python environment.
+    
+    Copy code
+    
+    `python delete_tweets.py` 
+    
+3.  The script will open the Twitter login page and automatically sign in using the provided credentials.
+    
+4.  After successful login, the script will navigate to your Twitter profile page and start deleting all your tweets.
+    
+5.  Please note that the deletion process cannot be undone, and all your tweets will be permanently deleted.
+    
+
+Warning
+-------
+
+* Be aware that this script deletes all your tweets on Twitter. Make sure to backup or save any important tweets before running the script.
+    
+* This script is subject to Twitter's policies and limits. Excessive or inappropriate use of this script may result in restrictions or suspension of your Twitter account.
+    
+
+Contributions
+-------------
+
+Contributions to this project are welcome. Feel free to submit a pull request with your improvements or bug fixes.
+
+Support
+-------
+
+If you have any questions or need assistance, please feel free to contact me.
+
+**Use this script with caution and at your own risk!**
