@@ -55,53 +55,63 @@ Este script se distribuye bajo la licencia GNU General Public License versión 3
 
 **¡Utiliza este script con precaución y bajo tu propia responsabilidad!** Si tienes alguna pregunta o sugerencia, no dudes en contactarme.
 
-## Mastodon to Twitter Bot
-
-./twitter/mastodon_to_twitter.py
+Mastodon to Twitter Bot
+=======================
 
 Este script te permite publicar toots de Mastodon en tu cuenta de Twitter automáticamente. Puedes seleccionar los toots que deseas compartir en Twitter y configurar la programación para que el proceso se ejecute de forma periódica.
 
-### Requisitos
+Requisitos
+----------
 
-- Python 3.6 o superior
-- Biblioteca `selenium` (instalable mediante `pip install selenium`)
-- Biblioteca `python-dotenv` (instalable mediante `pip install python-dotenv`)
-- WebDriver compatible con el navegador Chrome (consultar la documentación de Selenium para obtener detalles sobre la versión adecuada)
+* Python 3.6 o superior
+* Biblioteca `selenium` (instalable mediante `pip install selenium`)
+* Biblioteca `python-dotenv` (instalable mediante `pip install python-dotenv`)
+* WebDriver compatible con el navegador Chrome (consultar la documentación de Selenium para obtener detalles sobre la versión adecuada)
 
-### Configuración
+Configuración
+-------------
 
-1. Crea un archivo `.env` en el mismo directorio que el script. Dentro de este archivo, define las siguientes variables de entorno:
+1.  Crea un archivo `.env` en el mismo directorio que el script. Dentro de este archivo, define las siguientes variables de entorno:
+    
+    makefileCopy code
+    
+    `mastodon_client_id=TU_CLIENT_ID
+    mastodon_client_secret=TU_CLIENT_SECRET
+    mastodon_access_token=TU_ACCESS_TOKEN
+    twitter_api_key=TU_API_KEY
+    twitter_api_secret=TU_API_SECRET
+    twitter_access_token=TU_ACCESS_TOKEN
+    twitter_access_token_secret=TU_ACCESS_TOKEN_SECRET` 
+    
+    Asegúrate de reemplazar `TU_CLIENT_ID`, `TU_CLIENT_SECRET`, `TU_ACCESS_TOKEN`, `TU_API_KEY`, `TU_API_SECRET`, `TU_ACCESS_TOKEN`, y `TU_ACCESS_TOKEN_SECRET` con tus propias credenciales.
+    
+2.  Configura el WebDriver en el archivo `mastodon_to_twitter.py`. Asegúrate de que la ruta del WebDriver sea correcta y coincida con la versión y ubicación de tu WebDriver instalado.
+    
 
-```plaintext
-mastodon_client_id=TU_CLIENT_ID
-mastodon_client_secret=TU_CLIENT_SECRET
-mastodon_access_token=TU_ACCESS_TOKEN
-twitter_api_key=TU_API_KEY
-twitter_api_secret=TU_API_SECRET
-twitter_access_token=TU_ACCESS_TOKEN
-twitter_access_token_secret=TU_ACCESS_TOKEN_SECRET
+Uso
+---
 
-Asegúrate de reemplazar TU_CLIENT_ID, TU_CLIENT_SECRET, TU_ACCESS_TOKEN, TU_API_KEY, TU_API_SECRET, TU_ACCESS_TOKEN y TU_ACCESS_TOKEN_SECRET con tus propias credenciales.
+1.  Ejecuta el script `mastodon_to_twitter.py` en tu entorno Python.
+    
+    Copy code
+    
+    `python mastodon_to_twitter.py` 
+    
+2.  El script cargará los toots desde Mastodon y los mostrará en la consola. Puedes seleccionar los toots que deseas publicar en Twitter ingresando el número correspondiente a cada toot.
+    
+3.  Después de seleccionar los toots, el script los publicará automáticamente en tu cuenta de Twitter.
+    
+4.  El proceso se puede programar para que se ejecute periódicamente utilizando una herramienta externa, como `cron` en sistemas Unix, o mediante una tarea programada en Windows.
+    
 
-Configura el WebDriver en el archivo mastodon_to_twitter.py. Asegúrate de que la ruta del WebDriver sea correcta y coincida con la versión y ubicación de tu WebDriver instalado.
+Contribuciones
+--------------
 
-### Uso
-Ejecuta el script mastodon_to_twitter.py en tu entorno Python.
-
-```plaintext
-python mastodon_to_twitter.py
-```plaintext
-
-El script cargará los toots desde Mastodon y los mostrará en la consola. Puedes seleccionar los toots que deseas publicar en Twitter ingresando el número correspondiente a cada toot.
-
-Después de seleccionar los toots, el script los publicará automáticamente en tu cuenta de Twitter.
-
-El proceso se puede programar para que se ejecute periódicamente utilizando una herramienta externa, como cron en sistemas Unix, o mediante una tarea programada en Windows.
-
-# Contribuciones
 ¡Las contribuciones son bienvenidas! Si deseas contribuir a este proyecto, por favor crea un Pull Request con tus mejoras o soluciones a problemas existentes.
 
 Licencia
-Este script está bajo la licencia MIT. Puedes consultar el archivo LICENSE para más detalles.
+--------
+
+Este script está bajo la licencia MIT. Puedes consultar el archivo [LICENSE](LICENSE) para más detalles.
 
 ¡Disfruta utilizando el Mastodon to Twitter Bot! Si tienes alguna pregunta o sugerencia, no dudes en contactarme.
