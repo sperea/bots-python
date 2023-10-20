@@ -1,10 +1,11 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import json
+import os
 
 # Configura tus credenciales aquí:
-CLIENT_ID = '5f860af93361463d8df97acc89551e83'
-CLIENT_SECRET = '1f5759b3c68946d7b71796b3ab8777e0'
+CLIENT_ID = os.environ.get('SPOTIPY_CLIENT_ID')
+CLIENT_SECRET = os.environ.get('SPOTIPY_CLIENT_SECRET')
 REDIRECT_URI = 'http://localhost/'
 
 scope = 'user-library-read playlist-read-private'

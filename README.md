@@ -163,6 +163,27 @@ Usage
 5.  Please note that the deletion process cannot be undone, and all your tweets will be permanently deleted.
     
 
+Spotify Playlist Backup & Restore Scripts
+=========================================
+
+### Descripción
+
+Scripts para facilitar el backup y restauración de playlists en Spotify:
+
+#### Backup Script (backup_script.py):
+
+- Se conecta a tu cuenta de Spotify.
+- Recopila todas las canciones de tus playlists.
+- Crea un archivo .json para cada playlist, con el nombre de la playlist como el nombre del archivo, que contiene la información detallada de todas las canciones.
+
+#### Restore Script (restore_script.py):
+
+- Se conecta a una cuenta de Spotify (puede ser diferente de la original).
+- Lee un archivo .json generado por el script de backup.
+- Crea una nueva playlist en la cuenta y agrega todas las canciones del archivo .json a esta playlist.
+
+
+
 Warning
 -------
 
